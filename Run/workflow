@@ -1,0 +1,10 @@
+output > ask user which decks to use
+input < int
+output > any other decks?
+for x in array
+	...
+
+output > load bc
+output > per int entered, wc(s)
+input < # of wc's
+output > hit enter to continue, q to quit
