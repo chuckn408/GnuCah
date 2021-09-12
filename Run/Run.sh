@@ -7,7 +7,7 @@ bcmax=$(sed -n '$=' ../Main/bc);
 wcmax=$(sed -n '$=' ../Main/wc);
 Y=$bcmax; #AmtBlkCrds
 
-RANDOM=$$
+RANDOM=$(shuf -i 1-$Y -n 1)
 Ran=$((1 + $RANDOM % $Y)); #RanNumGen
 
 Bout=$(sed $Ran'q;d' ../Main/bc) #prep'd for wc_count
@@ -21,6 +21,7 @@ do
 	Y=$wcmax; #AmtWhtCrds
 	sed $Ran'q;d' ../Main/wc;
 	i=$((i+1))
+	RANDOM=$(shuf -i 1-$Y -n 1)
 	Ran=$((1 + $RANDOM % $Y)); #RanNumGen
 done;
 
