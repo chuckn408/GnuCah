@@ -16,13 +16,11 @@ wc_count=$(echo $Bout | tr ' ' '\n' | tr '.' '\n' | grep -c '____'); #Need wordc
 ##########output
 sed $Ran'q;d' ../Main/bc;
 i=1;
-echo $i
 while [ $i -le $wc_count ]
 do
 	Y=$wcmax; #AmtWhtCrds
 	sed $Ran'q;d' ../Main/wc;
 	i=$((i+1))
-	echo $wc_count
-	echo $i
+	Ran=$((1 + $RANDOM % $Y)); #RanNumGen
 done;
 
