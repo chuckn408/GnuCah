@@ -10,14 +10,9 @@ line = fo.readline()
 out=fo.readlines()[num]
 inserts = 0
 
-for word in out:
-    print out
-    inserts += 1
-
 ##print stuff here
 #print ("loaded: ", fo.name)
 #print (num)
-print ("final inserts:",inserts)
 print out
 fo.close()
 
