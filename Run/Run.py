@@ -2,22 +2,19 @@
 import random
 
 ###set/get random using size of bc
+blank = 0
+word = "____"
 rang=len(open('../Main/bc').readlines(  ))
 num=random.randrange(rang)
-word = "____"
 fo = open("../Main/bc", "r+")
 line = fo.readline()
 out=fo.readlines()[num]
-inserts = 0
 
-##print stuff here
-#print ("loaded: ", fo.name)
-#print (num)
+##get blank count and print BC
+blank += out.count(word)
 print out
 fo.close()
 
-#for word in out:
-    #dothis....
 ###set/get random using size of wc
 rang=len(open('../Main/wc').readlines(  ))
 num=random.randrange(rang)
@@ -26,9 +23,8 @@ fo = open("../Main/wc", "r+")
 line = fo.readline()
 out=fo.readlines()[num]
 
-##print stuff here
-#print ("loaded: ", fo.name)
-#print (num)
-print out
+##print WC
+while blank > 0:
+    print out
+    blank -=1
 fo.close()
-
