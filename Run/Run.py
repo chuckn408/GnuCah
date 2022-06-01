@@ -6,6 +6,7 @@ blank = 0
 word = "____"
 rang=len(open('../Main/bc').readlines(  ))
 num=random.randrange(rang)
+#BC stuff
 fo = open("../Main/bc", "r+")
 line = fo.readline()
 out=fo.readlines()[num]
@@ -15,16 +16,15 @@ blank += out.count(word)
 print out
 fo.close()
 
-###set/get random using size of wc
-rang=len(open('../Main/wc').readlines(  ))
-num=random.randrange(rang)
+#open WC stuff
 
-fo = open("../Main/wc", "r+")
-line = fo.readline()
-out=fo.readlines()[num]
-
-##print WC
 while blank > 0:
+    fo = open("../Main/wc", "r+")
+    line = fo.readline()
+    rang=len(open('../Main/wc').readlines(  ))
+    num=random.randrange(rang)
+    out=fo.readlines()[num]
     print out
     blank -=1
-fo.close()
+    #line = fo.readline()
+    fo.close()
